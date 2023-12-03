@@ -3,7 +3,7 @@ import { Search, ShoppingBag } from "lucide-react";
 
 function Header() {
   return (
-    <header className="flex items-center justify-between p-8 ">
+    <header className="flex items-center justify-between p-4 bg-green-600 ">
       <div className="flex gap-5 items-center">
         <Link href="/" className="text-white text-2xl font-extrabold">
           devstore
