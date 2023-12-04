@@ -3,13 +3,13 @@ import { Search, ShoppingBag } from "lucide-react";
 
 function Header() {
   return (
-    <header className="flex items-center justify-between p-4 bg-green-600 ">
+    <header className="flex items-center justify-between p-4 ">
       <div className="flex gap-5 items-center">
         <Link href="/" className="text-white text-2xl font-extrabold">
           devstore
         </Link>
 
-        <form className="flex items-center rounded-full bg-zinc-900 px-5 py-3 ring-2 ring-pink-500">
+        <form className="flex items-center rounded-full bg-zinc-900 px-5 py-3 ring-2 ">
           <Search className="w-5 h-5" />
           <input
             type="text"
