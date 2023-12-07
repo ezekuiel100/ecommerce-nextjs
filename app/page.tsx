@@ -17,7 +17,6 @@ export default async function Home() {
 
   return (
     <main>
-      <Header />
       <div className=" grid max-h-[800px] grid-cols-9 grid-rows-6 gap-6 p-8 ">
         <Link
           href={`/produto/${produtoDestaque.slug}`}
