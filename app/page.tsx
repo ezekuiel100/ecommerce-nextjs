@@ -1,13 +1,9 @@
 import Link from "next/link";
-import Header from "./components/header";
 import Image from "next/image";
-import { api } from "@/data/api";
 
 async function getFeturedProducts() {
-  await new Promise((resolve) => setTimeout(resolve, 3000));
-
-  const res = await api("/produtos/featured");
-
+  const res = await fetch("http://localhost:3000/api/produto/featured");
+  // const res = await api("/produtos/featured");
   const produtos = await res.json();
   return produtos;
 }
