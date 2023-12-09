@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Search, ShoppingBag } from "lucide-react";
+import Cart from "./cart";
 
 function Header() {
   return (
@@ -22,7 +23,9 @@ function Header() {
       <div className="flex gap-5">
         <div className="flex gap-2">
           <ShoppingBag />
-          <span>Card (0)</span>
+          <span>
+            <Cart />
+          </span>
         </div>
         <span>Conta</span>
       </div>

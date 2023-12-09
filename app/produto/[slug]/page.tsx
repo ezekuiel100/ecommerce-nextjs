@@ -1,3 +1,4 @@
+import ButtonCart from "@/app/components/buttonCart";
 import Image from "next/image";
 
 async function getProduct(slug) {
@@ -52,12 +53,7 @@ export default async function PaginaProduto({ params }) {
           </div>
         </div>
 
-        <button
-          type="button"
-          className="mt-8 h-12 w-full flex items-center justify-center bg-emerald-600  rounded-full font-semibold text-white"
-        >
-          Adicionar ao carrinho
-        </button>
+        <ButtonCart />
       </div>
     </div>
   );
