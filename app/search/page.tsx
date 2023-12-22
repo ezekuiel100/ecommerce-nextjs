@@ -2,7 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
-async function searchProduct(query) {
+type ParamsProps = {
+  searchParams: {
+    q: string;
+  };
+};
+
+async function searchProduct(query: string) {
   const response = await fetch(
     `http://localhost:3000/api/produto/search?q=${query}`
   );
@@ -11,7 +17,7 @@ async function searchProduct(query) {
   return products;
 }
 
-async function SearchPage({ searchParams }) {
+async function SearchPage({ searchParams }: ParamsProps) {
   const { q: query } = searchParams;
 
   if (!query) {

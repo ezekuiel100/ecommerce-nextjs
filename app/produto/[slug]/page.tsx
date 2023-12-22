@@ -1,21 +1,27 @@
 import ButtonCart from "@/app/components/buttonCart";
 import Image from "next/image";
 
-async function getProduct(slug) {
+type ParamsProps = {
+  params: {
+    slug: string;
+  };
+};
+
+async function getProduct(slug: string) {
   const res = await fetch(`http://localhost:3000/api/produto/${slug}`);
-  const product = res.json();
+  const product = await res.json();
 
   return product;
 }
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }: ParamsProps) {
   const produto = await getProduct(params.slug);
   return {
     title: produto.title,
   };
 }
 
-export default async function PaginaProduto({ params }) {
+export default async function PaginaProduto({ params }: ParamsProps) {
   const produto = await getProduct(params.slug);
 
   return (
